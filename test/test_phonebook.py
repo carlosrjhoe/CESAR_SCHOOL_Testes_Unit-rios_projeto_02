@@ -72,7 +72,7 @@ class TestePhoneBook:
         phonebook.add("Mayara", "111")
         phonebook.add("Neto", "444")
         resultado = phonebook.clear()
-        esperado = "phonebook limpado"
+        esperado = "Phonebook foi limpado com sucesso"
         assert resultado == esperado
 
     def test_change_number_do_nome_exitente(self, setUp):

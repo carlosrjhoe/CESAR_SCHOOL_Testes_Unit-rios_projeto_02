@@ -103,9 +103,13 @@ class Phonebook:
         """
         Clear all phonebook
         :return: return 'phonebook limpado'
+
+        Erros identificados:
+            Retornar uma string como confirmação do método pode ser redundante,
+            considerando que quem chamou o método já sabe que ele foi executado
         """
-        self.entries = {}
-        return "phonebook limpado"
+        self.entries.clear()
+        return "Phonebook foi limpado com sucesso"
 
     def search(self, search_name):
         """
