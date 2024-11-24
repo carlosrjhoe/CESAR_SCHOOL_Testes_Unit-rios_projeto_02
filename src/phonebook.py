@@ -116,10 +116,18 @@ class Phonebook:
         Search all substring with search_name
         :param search_name: string with name for search
         :return: return list with results of search
+
+        Erros identificados:
+            A lógica de if search_name not in name está invertida.
+
+        Pontos de melhoria:
+            Retornar uma lista com os pares {nome, número}
+            para os contatos que contêm uma substring
         """
+        
         result = []
         for name, number in self.entries.items():
-            if search_name not in name:
+            if search_name in name:
                 result.append({name, number})
         return result
 
