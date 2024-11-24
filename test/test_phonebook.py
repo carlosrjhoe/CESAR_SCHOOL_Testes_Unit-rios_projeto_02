@@ -61,8 +61,9 @@ class TestePhoneBook:
         phonebook = setUp
         phonebook.add("Carlos", "333")
         phonebook.add("Mayara", "111")
-        resultado = phonebook.get_numbers()
-        esperado = phonebook.entries.values()
+        phonebook.add("Neto", "444")
+        resultado = list(phonebook.get_numbers())
+        esperado = list(phonebook.entries.values())
         assert resultado == esperado
 
     def test_change_number_do_nome_exitente(self, setUp):
