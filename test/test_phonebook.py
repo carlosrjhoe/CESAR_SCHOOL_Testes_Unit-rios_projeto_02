@@ -75,6 +75,25 @@ class TestePhoneBook:
         esperado = "Phonebook foi limpado com sucesso"
         assert resultado == esperado
 
+    @pytest.mark.parametrize(
+        "subSt, reTur",
+        [
+            ("POL", [{"POLICIA", "190"}]),
+            ("Car", [{"Carlos", "333"}]),
+            ("May", [{"Mayara", "111"}]),
+            ("Net", [{"Neto", "444"}]),
+            ("", [{"POLICIA", "190"}, {"Carlos", "333"}, 
+                  {"Mayara", "111"}, {"Neto", "444"}])
+        ]
+    )
+    def test_search_retornar_o_que_contam_substring(self, setUp, subSt, reTur):
+        phonebook = setUp
+        phonebook.add("Carlos", "333")
+        phonebook.add("Mayara", "111")
+        phonebook.add("Neto", "444")
+        resultado = phonebook.search(subSt)
+        assert resultado == reTur
+
     def test_change_number_do_nome_exitente(self, setUp):
         """teste charge_number para alterar número do nome cadastrado"""
         phonebook = setUp
