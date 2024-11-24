@@ -82,9 +82,16 @@ class TestePhoneBook:
             ("Car", [{"Carlos", "333"}]),
             ("May", [{"Mayara", "111"}]),
             ("Net", [{"Neto", "444"}]),
-            ("", [{"POLICIA", "190"}, {"Carlos", "333"}, 
-                  {"Mayara", "111"}, {"Neto", "444"}])
-        ]
+            (
+                "",
+                [
+                    {"POLICIA", "190"},
+                    {"Carlos", "333"},
+                    {"Mayara", "111"},
+                    {"Neto", "444"},
+                ],
+            ),
+        ],
     )
     def test_search_retornar_o_que_contam_substring(self, setUp, subSt, reTur):
         phonebook = setUp

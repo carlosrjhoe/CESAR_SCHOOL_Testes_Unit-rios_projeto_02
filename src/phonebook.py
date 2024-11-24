@@ -124,7 +124,7 @@ class Phonebook:
             Retornar uma lista com os pares {nome, número}
             para os contatos que contêm uma substring
         """
-        
+
         result = []
         for name, number in self.entries.items():
             if search_name in name:
