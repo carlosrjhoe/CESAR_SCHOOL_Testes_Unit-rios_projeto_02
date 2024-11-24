@@ -66,6 +66,15 @@ class TestePhoneBook:
         esperado = list(phonebook.entries.values())
         assert resultado == esperado
 
+    def test_clear_para_excluir_todos_nomes_e_numeros_cadastrados(self, setUp):
+        phonebook = setUp
+        phonebook.add("Carlos", "333")
+        phonebook.add("Mayara", "111")
+        phonebook.add("Neto", "444")
+        resultado = phonebook.clear()
+        esperado = "phonebook limpado"
+        assert resultado == esperado
+
     def test_change_number_do_nome_exitente(self, setUp):
         """teste charge_number para alterar número do nome cadastrado"""
         phonebook = setUp
