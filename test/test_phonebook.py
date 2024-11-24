@@ -56,6 +56,15 @@ class TestePhoneBook:
         esperado = phonebook.entries.keys()
         assert resultado == esperado
 
+    def test_get_numbers_retornar_todos_numeros(self, setUp):
+        """teste get_names para retornar todos os nomes cadastrados"""
+        phonebook = setUp
+        phonebook.add("Carlos", "333")
+        phonebook.add("Mayara", "111")
+        resultado = phonebook.get_numbers()
+        esperado = phonebook.entries.values()
+        assert resultado == esperado
+
     def test_change_number_do_nome_exitente(self, setUp):
         """teste charge_number para alterar número do nome cadastrado"""
         phonebook = setUp

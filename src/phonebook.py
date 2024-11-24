@@ -5,7 +5,6 @@ class Phonebook:
 
     def add(self, name, number):
         """
-
         :param name: name of person in string
         :param number: number of person in string
         :return: 'Nome invalido' or 'Numero invalido' or 'Numero adicionado'
@@ -18,7 +17,6 @@ class Phonebook:
         Pontos de melhoria:
             Centralize a validação de caracteres em uma função separada para
             evitar duplicação e garantir consistência.
-
         """
         """Código refatorado:"""
         for char in ["#", "@", "!", "$", "%"]:
