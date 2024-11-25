@@ -94,6 +94,7 @@ class TestePhoneBook:
         ],
     )
     def test_search_retornar_o_que_contam_substring(self, setUp, subSt, reTur):
+        """teste search para retornar o nome da subString"""
         phonebook = setUp
         phonebook.add("Carlos", "333")
         phonebook.add("Mayara", "111")
