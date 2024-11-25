@@ -165,9 +165,18 @@ class Phonebook:
         Delete person with name
         :param name: String with name
         :return: return 'Numero deletado'
+
+        Erros identificados:
+            Não há verificação se o nome existe no 
+            phonebook antes de tentar removê-lo
+
+        Pontos de melhoria:
+            Verificar se o nome existe antes de tentar removê-lo.
         """
-        self.entries.pop(name)
-        return "Numero deletado"
+        if name in self.entries:
+            self.entries.pop(name)
+            return "Número deletado"
+        return "Nome não encontrado"
 
     def change_number(self, name, number):
         if name not in self.entries:
