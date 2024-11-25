@@ -147,10 +147,18 @@ class Phonebook:
 
     def get_phonebook_reverse(self):
         """
-
         :return: return phonebook in reverse sorted order
+
+        Erros identificados:
+            O método atualmente apenas retorna o dicionário self.entriessem
+            aplicar nenhuma ordenação, não atendendo à descrição de retornar
+            os dados em ordem reversa.
+
+        Pontos de melhoria:
+            Use sorted() para garantir que os
+            itens sejam ordenados em ordem decrescente.
         """
-        return self.entries
+        return dict(sorted(self.entries.items()))
 
     def delete(self, name):
         """
