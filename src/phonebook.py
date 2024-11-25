@@ -134,7 +134,7 @@ class Phonebook:
     def get_phonebook_sorted(self):
         """
         :return: return phonebook in sorted order
-        
+
         Erros identificados:
             método está retornando o dicionário self.entries diretamente,
             sem aplicar qualquer ordenação.

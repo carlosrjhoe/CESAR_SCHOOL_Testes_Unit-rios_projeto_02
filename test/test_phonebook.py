@@ -111,7 +111,7 @@ class TestePhoneBook:
         resultado = phonebook.get_phonebook_sorted()
         esperado = dict(sorted(phonebook.entries.items()))
         assert resultado == esperado
-        
+
     def test_change_number_do_nome_exitente(self, setUp):
         """teste charge_number para alterar número do nome cadastrado"""
         phonebook = setUp
