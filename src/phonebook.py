@@ -167,7 +167,7 @@ class Phonebook:
         :return: return 'Numero deletado'
 
         Erros identificados:
-            Não há verificação se o nome existe no 
+            Não há verificação se o nome existe no
             phonebook antes de tentar removê-lo
 
         Pontos de melhoria:
