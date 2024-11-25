@@ -102,6 +102,16 @@ class TestePhoneBook:
         resultado = phonebook.search(subSt)
         assert resultado == reTur
 
+    def test_get_phonebook_sorted(self, setUp):
+        """teste get_phonebook_sorted para retornar a lista ordenada"""
+        phonebook = setUp
+        phonebook.add("Carlos", "333")
+        phonebook.add("Mayara", "111")
+        phonebook.add("Neto", "444")
+        resultado = phonebook.get_phonebook_sorted()
+        esperado = sorted(phonebook.entries.items())
+        assert resultado == esperado
+        
     def test_change_number_do_nome_exitente(self, setUp):
         """teste charge_number para alterar número do nome cadastrado"""
         phonebook = setUp
