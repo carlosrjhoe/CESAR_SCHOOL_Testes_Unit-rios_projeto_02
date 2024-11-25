@@ -109,7 +109,7 @@ class TestePhoneBook:
         phonebook.add("Mayara", "111")
         phonebook.add("Neto", "444")
         resultado = phonebook.get_phonebook_sorted()
-        esperado = sorted(phonebook.entries.items())
+        esperado = dict(sorted(phonebook.entries.items()))
         assert resultado == esperado
         
     def test_change_number_do_nome_exitente(self, setUp):

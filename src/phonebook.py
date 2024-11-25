@@ -140,10 +140,10 @@ class Phonebook:
             sem aplicar qualquer ordenação.
 
         Pontos de melhoria:
-            retornar os itens do dicionário em uma lista de tuplas 
+            retornar os itens do dicionário em uma lista de tuplas
             (ou reconstruir o dicionário ordenado):
         """
-        return self.entries
+        return dict(sorted(self.entries.items()))
 
     def get_phonebook_reverse(self):
         """
