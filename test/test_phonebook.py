@@ -112,7 +112,7 @@ class TestePhoneBook:
         esperado = dict(sorted(phonebook.entries.items()))
         assert resultado == esperado
 
-    def test_get_phonebook_reverse_(self, setUp):
+    def test_get_phonebook_reverse(self, setUp):
         phonebook = setUp
         phonebook.add("Carlos", "333")
         phonebook.add("Mayara", "111")
