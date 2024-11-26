@@ -120,7 +120,7 @@ class TestePhoneBook:
         phonebook.add("Mayara", "111")
         phonebook.add("Neto", "444")
         resultado = phonebook.get_phonebook_reverse()
-        esperado = {"Carlos": "333", "Mayara": "111", 
+        esperado = {"Carlos": "333", "Mayara": "111",
                     "Neto": "444", "POLICIA": "190"}
         assert resultado == esperado
 
