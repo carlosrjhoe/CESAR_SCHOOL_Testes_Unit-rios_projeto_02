@@ -114,14 +114,29 @@ class TestePhoneBook:
 
     def test_get_phonebook_reverse(self, setUp):
         """teste get_phonebook_reverse para retornar
-            a lista ordenada invertida"""
+        a lista ordenada invertida"""
         phonebook = setUp
         phonebook.add("Carlos", "333")
         phonebook.add("Mayara", "111")
         phonebook.add("Neto", "444")
         resultado = phonebook.get_phonebook_reverse()
-        esperado = {"Carlos": "333", "Mayara": "111",
-                    "Neto": "444", "POLICIA": "190"}
+        esperado = {"Carlos": "333", "Mayara": "111", "Neto": "444", "POLICIA": "190"}
+        assert resultado == esperado
+
+    @pytest.mark.parametrize(
+        "nome, esperado",
+        [
+            ("Carlos", "Número deletado"),
+            ("Car", "Nome não encontrado"),
+        ],
+    )
+    def test_delete_para_deletar_um_usuario(self, setUp, nome, esperado):
+        """teste delete para verificar se o contato é deletado"""
+        phonebook = setUp
+        phonebook.add("Carlos", "333")
+        phonebook.add("Mayara", "111")
+        phonebook.add("Neto", "444")
+        resultado = phonebook.delete(nome)
         assert resultado == esperado
 
     def test_change_number_do_nome_exitente(self, setUp):
